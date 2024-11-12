@@ -12,3 +12,9 @@ Usage
 -----
 
 [View the documentation](https://swri-robotics.github.io/mapviz/) for usage information.
+
+For GPS image acquisition use:
+```
+sudo docker run -p 8080:8080 -d -t -v ~/mapproxy:/mapproxy danielsnider/mapproxy
+```
+For more information on displaying GPS maps in Mapviz, refer to the: https://github.com/danielsnider/MapViz-Tile-Map-Google-Maps-Satellite/blob/master/README.md

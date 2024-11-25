@@ -23,7 +23,7 @@ def generate_launch_description():
             executable="initialize_origin.py",
             name="initialize_origin",
             parameters=[
-                {"local_xy_frame": "gps_map"},
+                {"local_xy_frame": "world"},
                 {"local_xy_origin": "swri"},
                 {"local_xy_origins": """[
                     {"name": "swri",
@@ -39,10 +39,10 @@ def generate_launch_description():
                 ]"""},
             ],
         ),
-        launch_ros.actions.Node(
-            package="tf2_ros",
-            executable="static_transform_publisher",
-            name="swri_transform",
-            arguments="--x 0 --y 0 --z 0.0 --roll 0 --pitch 0 --yaw 0 --frame-id gps_map --child-frame-id world".split(' '),
-        ),
+        # launch_ros.actions.Node(
+        #     package="tf2_ros",
+        #     executable="static_transform_publisher",
+        #     name="swri_transform",
+        #     arguments="--x 0 --y 0 --z 0.0 --roll 0 --pitch 0 --yaw 0 --frame-id gps_map --child-frame-id world".split(' '),
+        # ),
     ])

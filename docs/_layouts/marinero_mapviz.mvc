@@ -7,11 +7,11 @@ enable_antialiasing: true
 show_displays: false
 show_status_bar: true
 show_capture_tools: true
-window_width: 1102
+window_width: 940
 window_height: 2123
 view_scale: 0.428159535
-offset_x: 75.3028259
-offset_y: -137.488449
+offset_x: 84.2941742
+offset_y: -140.913727
 use_latest_transforms: true
 background: "#a0a0a4"
 image_transport: raw

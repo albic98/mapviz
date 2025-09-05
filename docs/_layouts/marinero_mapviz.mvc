@@ -8,10 +8,10 @@ show_displays: false
 show_status_bar: true
 show_capture_tools: true
 window_width: 940
-window_height: 2123
-view_scale: 0.428159535
-offset_x: 84.2941742
-offset_y: -140.913727
+window_height: 2116
+view_scale: 0.408234119
+offset_x: 85.137207
+offset_y: -251.714676
 use_latest_transforms: true
 background: "#a0a0a4"
 image_transport: raw
@@ -56,12 +56,40 @@ displays:
     name: new display
     config:
       visible: true
-      collapsed: false
+      collapsed: true
       topic: /marinero/gps_sensor
       color: "#f6d32d"
       draw_style: lines
+      position_tolerance: 1
+      buffer_size: 0
+      qos_depth: 10
+      qos_history: 1
+      qos_reliability: 1
+      qos_durability: 2
+  - type: mapviz_plugins/path
+    name: new display
+    config:
+      visible: true
+      collapsed: true
+      topic: /plan
+      color: "#00ff00"
+      qos_depth: 10
+      qos_history: 1
+      qos_reliability: 1
+      qos_durability: 2
+  - type: mapviz_plugins/pose
+    name: new display
+    config:
+      visible: true
+      collapsed: true
+      topic: /goal_pose
+      color: "#000000"
+      draw_style: points
       position_tolerance: 0
       buffer_size: 0
+      show_laps: false
+      static_arrow_sizes: false
+      arrow_size: 25
       qos_depth: 10
       qos_history: 1
       qos_reliability: 1

@@ -13,8 +13,23 @@ Usage
 
 [View the documentation](https://swri-robotics.github.io/mapviz/) for usage information.
 
-For GPS image acquisition use:
+To acquire GPS map tiles using MapProxy, run:
 ```
 sudo docker run -p 8080:8080 -d -t -v ~/mapproxy:/mapproxy danielsnider/mapproxy
 ```
-For more information on displaying GPS maps in Mapviz, refer to the: https://github.com/danielsnider/MapViz-Tile-Map-Google-Maps-Satellite/blob/master/README.md
+
+Running Mapviz in the MARINERO Project
+----
+
+To launch Mapviz manually:
+```
+ros2 launch mapviz mapviz.launch.py
+```
+
+However, manual launch is not required for the MARINERO project.
+Mapviz is already integrated into the `marinero_navigation` package through the `localization_navigation.launch.py` file.
+
+Additional Resources
+
+For more details on displaying GPS maps in Mapviz (including Google Maps Satellite tiles), see: 
+https://github.com/danielsnider/MapViz-Tile-Map-Google-Maps-Satellite/blob/master/README.md
